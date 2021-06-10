@@ -48,7 +48,7 @@ class Personnage
     private $armeType;
 
     /**
-     * @ORM\ManyToOne(targetEntity=SkillSet::class, inversedBy="idPerso")
+     * @ORM\ManyToOne(targetEntity=SkillSet::class, inversedBy="idPerso", fetch="EAGER")
      * @ORM\JoinColumn(nullable=false)
      */
     private $skillSet;

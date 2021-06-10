@@ -20,37 +20,37 @@ class SkillSet
     private $id;
 
     /**
-     * @ORM\OneToMany(targetEntity=Personnage::class, mappedBy="skillSet")
+     * @ORM\OneToMany(targetEntity=Personnage::class, mappedBy="skillSet",fetch="EAGER")
      */
     private $idPerso;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Skill::class, inversedBy="persoAvec")
+     * @ORM\ManyToOne(targetEntity=Skill::class, inversedBy="persoAvec", fetch="EAGER")
      */
     private $skillA;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Skill::class, inversedBy="persoAvec")
+     * @ORM\ManyToOne(targetEntity=Skill::class, inversedBy="persoAvec",fetch="EAGER")
      */
     private $skillB;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Skill::class, inversedBy="persoAvec")
+     * @ORM\ManyToOne(targetEntity=Skill::class, inversedBy="persoAvec",fetch="EAGER")
      */
     private $skillC;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Support::class, inversedBy="persoAvec")
+     * @ORM\ManyToOne(targetEntity=Support::class, inversedBy="persoAvec",fetch="EAGER")
      */
     private $support;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Special::class, inversedBy="persoAvec")
+     * @ORM\ManyToOne(targetEntity=Special::class, inversedBy="persoAvec",fetch="EAGER")
      */
     private $special;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Arme::class, inversedBy="persoAvec")
+     * @ORM\ManyToOne(targetEntity=Arme::class, inversedBy="persoAvec",fetch="EAGER")
      */
     private $arme;
 
