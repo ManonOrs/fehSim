@@ -1,7 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    Hello PersonnageController!
+    Hello PersonnageController!                                      
+                    
+                
+            
+        
+    
 {% endblock %}
 
 {% block body %}
@@ -12,8 +17,105 @@
 
     <div class="example-wrapper">
         <h1>
-            
+            Fiche de personnage
+                                                                                
+                                                                    
+                                                        
+                                            
+                                
+                    
         </h1>
 
-    </div>
-{% endblock %}
+        <div class="container">
+            {# Titre + rank #}
+            <div class="row">
+                <div class="col-8">
+                    <h2>
+                        {{ personnage.nom }}
+                    </h2>
+                </div>
+                <div class="col-4">
+
+                    {{ personnage.rarete }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    {{ personnage.titre }}
+                </div>
+            </div>
+            {# image + skillset #}
+            <div class="row">
+                <div class="col-6">
+                    <img src="{{ personnage.imageDefault }}" alt="image perso"></div>
+                    <div class="col-6">
+                        <div class="row">
+
+                            {{ personnage.type }}
+                            {{ personnage.couleur }}
+                            {{ personnage.armeType }}
+
+                        </div>
+                        <div class="row">
+                            {% if personnage.skillset.arme is null %}
+                                -                                                              
+                                                                                            
+                                                            
+                            {% else %}
+                                {{ personnage.skillset.arme.nom }}
+                            {% endif %}
+                        </div>
+                        <div class="row">
+                            {% if personnage.skillset.skillA is null %}
+                                -
+                                                                                    
+                                                            
+                            {% else %}
+                                {{ personnage.skillset.skillA.nom }}
+                            {% endif %}
+                        </div>
+                        <div class="row">
+                            {% if personnage.skillset.skillB is null %}
+                                -
+                                                                                            
+                                                            
+                            {% else %}
+                                {{ personnage.skillset.skillB.nom }}
+                            {% endif %}
+
+                        </div>
+                        <div class="row">
+                            {% if personnage.skillset.skillC is null %}
+                                -
+                                                                                    
+                                                            
+                            {% else %}
+                                {{ personnage.skillset.skillC.nom }}
+                            {% endif %}
+                        </div>
+                        <div class="row">
+                            {% if personnage.skillset.support is null %}
+                                -
+                                                                                    
+                                                            
+                            {% else %}
+                                {{ personnage.skillset.support.nom }}
+                            {% endif %}
+                        </div>
+                        <div class="row">
+                            {% if personnage.skillset.special is null %}
+                                -
+                                                                                    
+                                                            
+                            {% else %}
+                                {{ personnage.skillset.special.nom }}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        {% endblock %}
+        

@@ -42,9 +42,11 @@ class PersonnageController extends AbstractController
      */
     public function affichgerPersonnage(int $id, Request $request): Response {
     
+        $persoRepository = $this->getDoctrine()->getRepository(Personnage::class);
+
         $personnage = $persoRepository->find($id);
 
-        return $this->render('personnage/index.html.twig', [
+        return $this->render('personnage/afficherPerso.html.twig', [
             'controller_name' => 'PersonnageController',
             'personnage' => $personnage
         ]);
