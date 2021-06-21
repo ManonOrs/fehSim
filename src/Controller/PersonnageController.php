@@ -23,7 +23,7 @@ use Symfony\Component\HttpFoundation\Request;
 class PersonnageController extends AbstractController
 {
     /**
-     * @Route("/personnage", name="personnage")
+     * @Route("/personnage", name="app_personnage")
      */
     public function index(): Response
     {
@@ -38,7 +38,7 @@ class PersonnageController extends AbstractController
     }
 
      /**
-     * @Route("/personnage/{id}", name="afficher_personnage")
+     * @Route("/personnage/{id}", name="app_afficher_personnage")
      */
     public function affichgerPersonnage(int $id, Request $request): Response {
     

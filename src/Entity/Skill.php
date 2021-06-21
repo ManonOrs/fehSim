@@ -49,6 +49,11 @@ class Skill
      */
     private $persoAvec;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $image;
+
 
     public function __construct()
     {
@@ -160,6 +165,18 @@ class Skill
                 $persoAvec->setSkillA(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }
